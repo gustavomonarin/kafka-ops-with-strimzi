@@ -1,0 +1,22 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: strimzi-topic-operator
+spec:
+  selector:
+    matchLabels:
+      name: strimzi-topic-operator
+  template:
+    spec:
+      containers:
+        - name: strimzi-topic-operator
+          env:
+            - name: STRIMZI_KAFKA_BOOTSTRAP_SERVERS
+              value: my-cluster-kafka-bootstrap:9092
+            - name: STRIMZI_ZOOKEEPER_CONNECT
+              value: my-cluster-zookeeper-client:2181
+            - name: STRIMZI_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace

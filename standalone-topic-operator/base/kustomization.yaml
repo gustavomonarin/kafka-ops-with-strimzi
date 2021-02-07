@@ -1,0 +1,6 @@
+resources:
+  - ../base-strimzi-upstream/install/topic-operator/01-ServiceAccount-strimzi-topic-operator.yaml
+  - ../base-strimzi-upstream/install/topic-operator/02-Role-strimzi-topic-operator.yaml
+  - ../base-strimzi-upstream/install/topic-operator/03-RoleBinding-strimzi-topic-operator.yaml
+  - ../base-strimzi-upstream/install/topic-operator/04-Crd-kafkatopic.yaml
+  - ../base-strimzi-upstream/install/topic-operator/05-Deployment-strimzi-topic-operator.yaml

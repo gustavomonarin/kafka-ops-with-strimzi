@@ -1,0 +1,5 @@
+bases:
+  - ../../base
+
+patchesStrategicMerge:
+  - 05-Deployment-strimzi-topic-operator.yaml
