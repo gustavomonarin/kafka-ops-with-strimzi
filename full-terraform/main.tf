@@ -25,3 +25,12 @@ resource "helm_release" "legacy-kafka-helm" {
   namespace  = "legacy-kafka"
   create_namespace = true
 }
+
+resource "helm_release" "strimzi-operator" {
+  name       = "strimzi-operator"
+  repository = "https://strimzi.io/charts/"
+  chart      = "strimzi-kafka-operator"
+  version    = "0.21.1"
+  namespace  = "strimzi-operator"
+  create_namespace = true
+}
